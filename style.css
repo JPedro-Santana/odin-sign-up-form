@@ -1,30 +1,119 @@
+@font-face {
+  font-family: "Norse";
+  src: url(/font/norse.regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
 aside {
-  background-image: url("/images/halie-west-25xggax4bSA-unsplash.jpg");
-  background-size: cover;
   flex: 1;
   display: flex;
-  align-items: center;
+  background-image: url("/images/halie-west-25xggax4bSA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: flex-start;
   justify-content: center;
+  position: relative;
 }
 
 .logo-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: white;
-  padding: 20px 0;
   width: 100%;
+  margin-top: 120px;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.odin-logo {
-  width: 100px;
+.logo-container h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Norse";
+  letter-spacing: 5px;
+}
+
+.logo-container img {
   height: 120px;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  background-color: #f9fafb;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  padding: 40px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  max-width: 630px;
+}
+
+.intro p:first-child {
+  margin-bottom: 20px;
+}
+
+form {
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+  color: #222c3a;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #222c3a;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 
 input {
   border: 1px solid #e5e7eb;
   border-radius: 4px;
   padding: 7px;
-  /*width: 100%;*/
+  font-size: 18px;
 }
 
 input[type="password"]:invalid {
@@ -40,9 +129,31 @@ input:focus {
 button {
   background-color: #596d48;
   color: white;
+  font-weight: 550;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 6px;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 14px 40px;
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.bottom{
+  margin: 30px;
+}
+
+.bottom p {
+  margin-top: 30px;
+  font-weight: 540;
+  
+}
+
+.bottom a{
+  color: #596d48;
+  text-decoration: none;
+  font-weight: 600;
 }
